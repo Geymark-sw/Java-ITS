@@ -1,0 +1,8 @@
+﻿# Escludi la cartella di Eclipse
+.metadata/
+.settings/
+.classpath
+.project
+bin/
+target/
+.idea/

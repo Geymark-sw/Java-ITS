@@ -1,0 +1,10 @@
+{"id":"TtZ3P1FAG8lB","password":"wCpS5Dtz41S%n","protocollo":"WPA2","frequenza":1.673673849054245E9}
+{"id":"NzuUgNXWGnoNTL96dmJcHt4b","password":"_$$vc829vY8Q_.qnMUfp","protocollo":"WPA2","frequenza":4.31375341419248E9}
+{"id":"MKlAF9f3xSjkaiCY","password":"GEh$zWNtnzP1sifv","protocollo":"WPA3","frequenza":4.2163874579282084E9}
+{"id":"CptSnfLiRoSsfOTvagbG","password":"Dwrwz9|$Zs,rvEk-U!A","protocollo":"WPA3","frequenza":1.8746768991790085E9}
+{"id":"AhZfJOlPwCVPays5jfhYcHAv","password":"0!JhMSx919fhV7geRZ8EvMB","protocollo":"WPA","frequenza":1.505903681348523E9}
+{"id":"zgRFqiVNHT8XN","password":"9dLZzlH8mdIq4Wj","protocollo":"WPA2","frequenza":3.379731159033772E9}
+{"id":"IbR8S3HIM6zVufxFsdoXK9","password":"U4_mx5::4gb4Kl-cl1x","protocollo":"WPA2","frequenza":1.3355123328502643E9}
+{"id":"QizRLB3h28tWcjulc4gSwUa","password":"9jIUtg!BC2ml_yMI","protocollo":"WPA2","frequenza":2.8881199632976656E9}
+{"id":"kuYL4fGUUUhpNUQ2U0zpfI","password":"-8Z?zsI?87xT4","protocollo":"WEP","frequenza":3.1892659888240457E9}
+{"id":"OUZbtTMvWMC1IQ6S9n1","password":"YLmDCUm!PDK_hPKZIuo!O","protocollo":"WPA3","frequenza":1.661876746285687E9}
