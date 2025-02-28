@@ -42,9 +42,9 @@ public class StudenteService {
 	}
 	
 	
-	public boolean modificaIndirizzo(int matricola, String inidirizzo) {
+	public boolean modificaIndirizzo(int matricola, String indirizzo) {
 		if(this.dao.cercaStudente(matricola) != null) {
-			this.dao.cercaStudente(matricola).setIndirizzo(inidirizzo);
+			this.dao.cercaStudente(matricola).setIndirizzo(indirizzo);
 			return true;
 		}
 		
@@ -79,7 +79,7 @@ public class StudenteService {
 		
 	}
 	
-	public CognomeAnnoDiIscrizionePiùGrandeDTO visualizzaAnnoDiIscrizionePiùGrande() {
+	public CognomeAnnoDiIscrizionePiùGrandeDTO visualizzaCognomeAnnoDiIscrizionePiùGrande() {
 		int max = 0;
 		String cognome = "";
 		
