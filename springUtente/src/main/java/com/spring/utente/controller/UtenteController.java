@@ -3,13 +3,18 @@ package com.spring.utente.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.utente.dto.ErroreDTO;
 import com.spring.utente.dto.ListaNomiCognomiENUtentiDTO;
 import com.spring.utente.dto.NomeCognomeDTO;
 import com.spring.utente.dto.UtenteDTO;
@@ -63,5 +68,15 @@ public class UtenteController {
 		
 	}
 	
+	
+	@ExceptionHandler
+	public ResponseEntity<ErroreDTO> gestore(RuntimeException exc){
+		
+		ErroreDTO errore = new ErroreDTO(exc.getMessage());
+		ResponseEntity<ErroreDTO> response = new ResponseEntity<ErroreDTO>(errore, HttpStatus.NOT_FOUND);
+		
+		return response;
+		
+	}
 	
 }

@@ -28,7 +28,12 @@ public class DAOUtenteMappaImpl implements DAOUtente{
 	}
 
 	public Utente selectById(Integer idUtente) {
-		return mappa.get(idUtente);
+		Utente utente =  mappa.get(idUtente);
+		
+		if(utente != null)
+			return utente;
+		else
+			throw new RuntimeException("Id non presente");
 	}
 	
 	public boolean delete(Integer idUtente) {
