@@ -40,6 +40,8 @@ public class RubricaService {
 		return this.dao.deleteRubrica(idRubrica);
 	}
 	
+	//Funzioni avanzate di sotto
+	
 	
 	
 

@@ -17,7 +17,7 @@ public class ContattoService {
 	private RubricaDAOMappaImpl dao;
 	
 	public boolean insertContatto(String idRubrica, Contatto c) {
-		
+		//dao.selectByIdRubrica(idRubrica)		Utilizzare Solo Le funzioni CRUD di Rubrica, quindi implementare solo 4 funzioni per DAORubrica anche per effettuare operazioni di Contatto
 		return this.dao.insertContatto(idRubrica, c);
 	}
 	
