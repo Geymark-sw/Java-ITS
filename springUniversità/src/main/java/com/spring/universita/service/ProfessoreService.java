@@ -2,11 +2,14 @@ package com.spring.universita.service;
 
 import java.util.*;
 
+import org.springframework.stereotype.Service;
+
 import com.spring.universita.dao.DAOProfessoreMappa;
 import com.spring.universita.dto.ProfessoreDTO;
 import com.spring.universita.entity.Professore;
 import com.spring.universita.utility.Conversioni;
 
+@Service
 public class ProfessoreService {
 	
 	private DAOProfessoreMappa dao = new DAOProfessoreMappa();
