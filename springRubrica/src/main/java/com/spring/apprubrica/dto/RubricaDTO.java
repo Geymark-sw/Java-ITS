@@ -15,6 +15,11 @@ public class RubricaDTO {
 		this.proprietario = proprietario;
 		this.annoCreazione = annoCreazione;
 	}
+	
+	public RubricaDTO(String proprietario, String annoCreazione) {
+		this.proprietario = proprietario;
+		this.annoCreazione = annoCreazione;
+	}
 
 	public String getId() {
 		return id;
