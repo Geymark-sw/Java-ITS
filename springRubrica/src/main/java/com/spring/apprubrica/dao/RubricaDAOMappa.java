@@ -15,13 +15,15 @@ public interface RubricaDAOMappa {
 
 	public boolean deleteRubrica(String idRubrica);
 	
-	public boolean insertContatto(String idRubrica, Contatto c);
-	
-	public Contatto selectByIdContatto(String idRubrica, String idContatto);
-	
-	public boolean deleteContatto(String idRubrica, String id);
-	
-	public List<Contatto> selectAllContatto (String idRubrica);
+	/*
+	 * public boolean insertContatto(String idRubrica, Contatto c);
+	 * 
+	 * public Contatto selectByIdContatto(String idRubrica, String idContatto);
+	 * 
+	 * public boolean deleteContatto(String idRubrica, String id);
+	 * 
+	 * public List<Contatto> selectAllContatto (String idRubrica);
+	 */
 
 	
 }

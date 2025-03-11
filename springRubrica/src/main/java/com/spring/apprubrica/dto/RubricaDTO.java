@@ -10,6 +10,7 @@ public class RubricaDTO {
 	private String id, proprietario, annoCreazione;
 	private Map<String, Contatto> mappaContatti = new HashMap<String, Contatto>();
 	
+	
 	public RubricaDTO(String id, String proprietario, String annoCreazione) {
 		this.id = id;
 		this.proprietario = proprietario;
@@ -20,6 +21,7 @@ public class RubricaDTO {
 		this.proprietario = proprietario;
 		this.annoCreazione = annoCreazione;
 	}
+	
 
 	public String getId() {
 		return id;
@@ -57,7 +59,12 @@ public class RubricaDTO {
 
 	@Override
 	public String toString() {
-		return "Rubrica [id=" + id + ", proprietario=" + proprietario + ", annoCreazione=" + annoCreazione + "]";
+		return "RubricaDTO [id=" + id + ", proprietario=" + proprietario + ", annoCreazione=" + annoCreazione
+				+ ", mappaContatti=" + mappaContatti + "]";
 	}
+
+	
+	
+	
 
 }

@@ -6,6 +6,7 @@ public class ContattoDTO {
 	
 	private String id, nome, cognome, numero, gruppo = "default";
 	private LocalDate dataNascita;
+	private boolean preferito = false;
 	
 	
 	
@@ -62,9 +63,27 @@ public class ContattoDTO {
 	public LocalDate getDataNascita() {
 		return dataNascita;
 	}
+	
+	
 	public void setDataNascita(LocalDate dataNascita) {
 		this.dataNascita = dataNascita;
 	}
+	
+	
+	public boolean isPreferito() {
+		return preferito;
+	}
+
+
+
+
+	public void setPreferito(boolean preferito) {
+		this.preferito = preferito;
+	}
+
+
+
+
 	@Override
 	public String toString() {
 		return "Contatto [nome=" + nome + ", cognome=" + cognome + ", numero=" + numero + ", gruppo=" + gruppo

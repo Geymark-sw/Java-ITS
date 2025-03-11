@@ -2,6 +2,7 @@ package com.spring.apprubrica.utility;
 
 import com.spring.apprubrica.dto.ContattoDTO;
 import com.spring.apprubrica.dto.RubricaDTO;
+import com.spring.apprubrica.dto.RubricaENContattiDTO;
 import com.spring.apprubrica.entity.Contatto;
 import com.spring.apprubrica.entity.Rubrica;
 
@@ -24,6 +25,10 @@ public class Conversione {
 	
 	public static ContattoDTO daContattoAContattoDTO(Contatto c) {
 		return new ContattoDTO(c.getId(), c.getNome(), c.getCognome(), c.getNumero(), c.getGruppo(), c.getDataNascita());
+	}
+	
+	public static RubricaENContattiDTO daRubricaARubricaENContattiDTO(Rubrica r) {
+		return new RubricaENContattiDTO(r.getId(), r.getProprietario(), r.getAnnoCreazione());
 	}
 	
 	

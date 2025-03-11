@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.apprubrica.dao.RubricaDAOMappaImpl;
 import com.spring.apprubrica.dto.RubricaDTO;
+import com.spring.apprubrica.dto.RubricaENContattiDTO;
 import com.spring.apprubrica.entity.Rubrica;
 import com.spring.apprubrica.utility.Conversione;
 
@@ -102,6 +103,31 @@ public class RubricaService {
 	
 		return new RubricaDTO(rubPiuVecchia.getProprietario(), rubPiuVecchia.getAnnoCreazione());
 	}
+	
+	
+	public List<String> getAnniRubriche(){
+		
+		List<String> anniRubriche = new ArrayList<String>();
+		for(Rubrica r : this.dao.selectAllRubrica()) {
+			
+			if(!anniRubriche.contains(r.getAnnoCreazione()))
+				anniRubriche.add(r.getAnnoCreazione());
+		}
+		Collections.sort(anniRubriche);
+		return anniRubriche;
+		
+	}
+	
+	//Ultima Funzione delle Rubriche
+	//Visualizza nome proprietario e numero contatti di una rubrica
+	public List<RubricaENContattiDTO> getRubricheENContattiDTO(){
+		List<RubricaENContattiDTO> rubricheENContatti = new ArrayList<RubricaENContattiDTO>();
+		for(Rubrica r : this.dao.selectAllRubrica()) {
+			rubricheENContatti.add(Conversione.daRubricaARubricaENContattiDTO(r));
+		}
+		return rubricheENContatti;
+	}
+	
 	
 
 }
