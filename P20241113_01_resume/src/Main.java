@@ -50,7 +50,7 @@ public class Main {
 	System.out.println(lg);
 	Collections.shuffle(lg);
 	lg.sort(null);
-	
+
 	lg.sort(new Comparator<Ghepardo>() {
 		public int compare(Ghepardo g1, Ghepardo g2) {
 			return g1.getSpeed().compareTo(g2.getSpeed());
