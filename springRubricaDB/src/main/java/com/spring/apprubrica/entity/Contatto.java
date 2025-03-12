@@ -1,19 +1,17 @@
-package com.spring.apprubrica.dto;
+package com.spring.apprubrica.entity;
 
 import java.time.LocalDate;
 
-public class ContattoDTO {
+public class Contatto {
 	
 	private String id, nome, cognome, numero, gruppo = "default";
 	private LocalDate dataNascita;
 	private boolean preferito = false;
 	
-	public ContattoDTO() {
-		
-	}
 	
 	
-	public ContattoDTO(String id, String nome, String cognome, String numero, String gruppo, LocalDate dataNascita) {
+	
+	public Contatto(String id, String nome, String cognome, String numero, String gruppo, LocalDate dataNascita) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -65,31 +63,26 @@ public class ContattoDTO {
 	public LocalDate getDataNascita() {
 		return dataNascita;
 	}
-	
-	
 	public void setDataNascita(LocalDate dataNascita) {
 		this.dataNascita = dataNascita;
+		
 	}
-	
 	
 	public boolean isPreferito() {
 		return preferito;
 	}
 
 
-
-
 	public void setPreferito(boolean preferito) {
 		this.preferito = preferito;
 	}
-
-
-
-
+	
 	@Override
 	public String toString() {
 		return "Contatto [nome=" + nome + ", cognome=" + cognome + ", numero=" + numero + ", gruppo=" + gruppo
 				+ ", dataNascita=" + dataNascita + "]";
 	}
+	
+	
 
 }
