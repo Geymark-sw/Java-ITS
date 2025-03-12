@@ -40,7 +40,7 @@ public class UtenteController {
 		return service.registra(dto);
 	}
 	
-	//L'ID deve viaggiare come path		L'asciamo solo l'ID
+	//L'ID deve viaggiare come path		Lasciamo solo l'ID
 	@GetMapping(path="/{id}", produces = "application/json")
 	public UtenteDTO cercaPerId(@PathVariable int id) {
 		/*
