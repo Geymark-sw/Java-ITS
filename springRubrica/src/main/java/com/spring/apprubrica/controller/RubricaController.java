@@ -1,4 +1,4 @@
-package com.spring.apprubrica;
+package com.spring.apprubrica.controller;
 
 import java.util.*;
 
