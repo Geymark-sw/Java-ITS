@@ -43,20 +43,20 @@ public class RubricaService {
 	
 	//Funzioni avanzate di sotto
 	
-	public RubricaDTO getProprietarioAnnoCreazioneRubrica(String id) {
-		Rubrica rubrica = this.dao.selectByIdRubrica(id);
+	public RubricaDTO getProprietarioAnnoCreazioneRubrica(String idRubrica) {
+		Rubrica rubrica = this.dao.selectByIdRubrica(idRubrica);
 		return new RubricaDTO(rubrica.getProprietario(), rubrica.getAnnoCreazione());
 	}
 	
-	public RubricaDTO modificaNomeProprietarioRubrica(String id, String proprietario) {
-		Rubrica r = this.dao.selectByIdRubrica(id);
+	public RubricaDTO modificaNomeProprietarioRubrica(String idRubrica, String proprietario) {
+		Rubrica r = this.dao.selectByIdRubrica(idRubrica);
 		r.setProprietario(proprietario);
 		
 		return Conversione.daRubricaARubricaDTO(r);
 	}
 	
-	public RubricaDTO modificaAnnoCreazioneRubrica(String id, String anno) {
-		Rubrica r = this.dao.selectByIdRubrica(id);
+	public RubricaDTO modificaAnnoCreazioneRubrica(String idRubrica, String anno) {
+		Rubrica r = this.dao.selectByIdRubrica(idRubrica);
 		r.setAnnoCreazione(anno);
 		
 		return Conversione.daRubricaARubricaDTO(r);
