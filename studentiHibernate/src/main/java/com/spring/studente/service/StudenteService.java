@@ -10,5 +10,6 @@ public interface StudenteService {
 	public StudenteDTO cerca(Integer matricola);
 	public List<StudenteDTO> visualizzaTutti();
 	public boolean cancella(Integer matricola);
+	public List<StudenteDTO> getGiovani(int annoImm);
 	
 }

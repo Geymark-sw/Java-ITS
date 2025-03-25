@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.studente.dto.StudenteDTO;
@@ -44,5 +45,10 @@ public class StudenteController {
 	@DeleteMapping(path = "/{matricola}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public boolean cancella(@PathVariable Integer matricola) {
 		return this.service.cancella(matricola);
+	}
+	
+	@GetMapping(path = "/giovani", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<StudenteDTO> getGiovani(@RequestParam int annoImm){
+		return this.service.getGiovani(annoImm);
 	}
 }

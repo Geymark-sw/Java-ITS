@@ -3,6 +3,7 @@ package com.spring.studente.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,6 +61,18 @@ public class StudenteServiceImpl implements StudenteService {
 			return true;
 		}
 		return false;
+		
+	}
+
+	@Override
+	public List<StudenteDTO> getGiovani(int annoImm) {
+		List<Studente> lstud = this.dao.getGiovani(annoImm);
+		
+		//trasformazione
+		return lstud.stream()
+				.map(studente -> new StudenteDTO(studente.getMatricola(), studente.getNome(), studente.getCognome(), studente.getAnnoImm()))
+				.collect(Collectors.toList());
+		
 		
 	}
 
