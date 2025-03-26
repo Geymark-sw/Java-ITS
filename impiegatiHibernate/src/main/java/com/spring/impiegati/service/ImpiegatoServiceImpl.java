@@ -85,12 +85,16 @@ public class ImpiegatoServiceImpl implements ImpiegatoService{
 	public List<ImpiegatoDTO> visualizzaImpiegatiOrdCognome() {
 		List<ImpiegatoDTO> ldto = new ArrayList<ImpiegatoDTO>();
 		for(Impiegato i : this.dao.visualizzaImpiegatiOrdCognome())
+			ldto.add(Conversione.daImpiegatoAImpiegatoDTO(i));
+		return ldto;
 	}
 
 	@Override
 	public List<ImpiegatoDTO> visualizzaImpiegatiOrdSalario() {
-		// TODO Auto-generated method stub
-		return null;
+		List<ImpiegatoDTO> ldto = new ArrayList<ImpiegatoDTO>();
+		for(Impiegato i : this.dao.visualizzaImpiegatiOrdSalario())
+			ldto.add(Conversione.daImpiegatoAImpiegatoDTO(i));
+		return ldto;
 	}
 	
 

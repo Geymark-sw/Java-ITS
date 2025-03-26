@@ -19,6 +19,9 @@ public interface ImpiegatoDAO extends JpaRepository<Impiegato, Integer>{
 	@Query(nativeQuery = true, value = "SELECT * FROM impiegato ORDER BY cognome ASC")
 	public List<Impiegato> visualizzaImpiegatiOrdCognome();
 	
+	@Query(nativeQuery = true, value = "SELECT * FROM impiegato ORDER BY salario_mensile")
+	public List<Impiegato> visualizzaImpiegatiOrdSalario();
+	
 	
 	
 }
